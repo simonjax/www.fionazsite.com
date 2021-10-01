@@ -1,0 +1,151 @@
+*{  
+    scroll-behavior: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --frosted-glass: #a8ccd750;
+    --light-glass-frost: #f6feff98;
+}
+body{
+    width: 375px;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(./Resources/finestbg.jpg);
+    background-size: 375px 812px;
+    background-repeat: no-repeat;
+    animation: body 270s infinite linear alternate;
+}
+@keyframes body {
+    0%{background-position: left;
+    background-size: inherit;}
+    100%{background-position: right;
+    background-size: inherit;}
+}
+#cards{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    font-size: 2rem;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    width: 375px;
+}
+#cards::before{
+    background-color: var(--frosted-glass);
+    backdrop-filter: blur(5px) saturate(50%) contrast(45%) brightness(130%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+#card-text{
+    position: relative;
+    color: #6f7886;
+    z-index: 2;
+}
+header{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 50px 20px;
+    border-bottom: palegoldenrod 2px solid;
+}
+#logo{
+    position: absolute;
+    top: 15px;
+    left: 140px;
+    color: red;
+    font-size: 3.4rem;
+    padding: 0;
+}
+#logo img{
+    position: absolute;
+    top: 14px;
+    right: 170px;
+    max-width: 50%;
+    transform: scale(2.0);
+    border-radius: 50%;
+}
+nav{
+    margin: -10px 0px 0px 110px;
+}
+nav li{
+
+    float: left;
+    list-style: none;
+    padding: 0px 5px;
+    position: relative;
+    top: 35px;
+    left: 10px;
+    font-size: 25px;
+}
+nav li a:hover{
+    content: "";
+    border-bottom: tomato 2px solid;
+}
+nav li a {
+    cursor: default;
+    border-bottom: tomato 0px solid;
+    text-decoration: none;
+    color: white;
+    transform-origin: left;
+    transition: ease-in-out 0.25s;
+}
+
+/* showcase arena */
+#top-prt #cards{
+    overflow: hidden;
+    border-radius: 5px;
+    max-width: 375px;
+    height: 200px;
+}
+#top-prt #card-text{
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
+#top-prt .text{
+    color: rgba(0,0,0,0.49);
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.prof-img img{
+    box-shadow: 2px 5px 10px #333;
+    border: 2px solid #ddd;
+    width: 100px;
+    height: auto;
+}
+#middle-prt{
+    z-index: -5;
+    font-size: 18px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+#middle-prt #cards::before{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#middle-prt #cards{
+    height: 200px;
+}
+#middle-prt .middle-container{
+    width: 2000px;
+    position: relative;
+    display: flex;
+}
+#bottom-prt{
+    height: auto;
+    background: var(--frosted-glass);
+}
+.side-text{
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.main-text{
+    font-size: 20px;
+    padding: 10px 20px;
+}

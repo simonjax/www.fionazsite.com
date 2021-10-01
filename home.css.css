@@ -1,0 +1,194 @@
+/*              home-page layout
+header & footer cover about same area 1/3 
+showcase covers 2/3 of e area  
+there should be an image-slider for the showcase about 2/3 of area
+afew descriptive terms for web-site
+*/
+
+/*               link-page lay-out
+should appear like the sky-sports page lay-out
+same effects should be maintained
+there should be an image-slider but not animated
+
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --frosted-glass: #a8ccd76c;
+    --light-glass-frost: #f6feff79;
+}
+body{
+    max-width: 375px;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background: #ddd; */
+}
+header{
+    overflow: hidden;
+    position: sticky;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 50px 20px;
+    border-bottom: palegoldenrod 2px solid;
+}
+#logo{
+    position: absolute;
+    top: 15px;
+    left: 140px;
+    color: red;
+    font-size: 3.4rem;
+    padding: 0;
+}
+#logo img{
+    position: absolute;
+    top: 14px;
+    right: 170px;
+    max-width: 50%;
+    transform: scale(2.0);
+    border-radius: 50%;
+}
+nav{
+    margin: -10px 0px 0px 110px;
+}
+nav li{
+
+    float: left;
+    list-style: none;
+    padding: 0px 5px;
+    position: relative;
+    top: 35px;
+    left: 10px;
+    font-size: 25px;
+}
+nav li a:hover{
+    content: "";
+    border-bottom: tomato 2px solid;
+}
+
+nav li a {
+    cursor: default;
+    border-bottom: tomato 0px solid;
+    text-decoration: none;
+    color: white;
+    transform-origin: left;
+    transition: ease-in-out 0.25s;
+}
+/* showcase area */
+#showcase{
+    background: #ccc;
+}
+.img-container img{
+    height: auto;
+    width: 375px;
+    float: left;
+}
+.slide-container{
+    overflow: hidden;
+    background-color: #ccc;
+    height: auto;
+    width: 375px;
+}
+.img-container{
+    position: relative;
+    height: auto;
+    width: 1125px;
+    -webkit-animation-name: identifier;
+    -webkit-animation-play-state: running;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+}
+@keyframes identifier {
+    0% {
+      left: 0px;
+    }
+    10% {
+      left: 0px;
+    }
+    20% {
+      left: -375px;
+    }
+    30% {
+      left: -375px;
+    }
+    40% {
+      left: -750px;
+    }
+    50% {
+      left: -750px;
+    }
+    60% {
+      left: -375px;
+    }
+    70% {
+      left: -375px;
+    }
+    80% {
+      left: 0px;
+    }
+    90% {
+      left: 0px;
+    }
+    100% {
+      left: 0px;
+    }
+}
+#after-slideshow{
+    position: relative;
+    height: auto;
+    padding: 10px 10px;
+    text-align: center;
+    background: var(--frosted-glass);
+}
+#welcome-note{
+  position: relative;
+    top: -80px;
+    font-size: 3.2rem;
+    color: red;
+    background: var(--light-glass-frost);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2.5px 20px rgba(51, 51, 51, 0.892);
+    text-shadow: 2.5px 2.8px 8px black;
+    margin-bottom: 10px;
+}
+.other-text{
+    position: relative;
+    top: -60px;
+    color:rgb(163, 30, 30);
+    height: fit-content;
+}
+.other-text ol{
+  font-size: 23px;
+  text-align: left;
+  list-style: square;
+  position: relative;
+  left: 120px;
+  color: rgba(165, 42, 42, 0.808);
+}
+
+#footer{
+    background: rgb(151, 151, 149);
+    max-height: 10rem;
+    max-width: 375px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 18px;
+
+}
+#footer .info{
+    padding: 2px;
+}
+#footer .text{
+    display: flex;
+    color: rgb(97, 20, 173);
+}
+#copy-right{
+    text-align: center;
+    padding-bottom: 5px;
+}
